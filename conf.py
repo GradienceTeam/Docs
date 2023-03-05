@@ -5,7 +5,8 @@
 
 import os
 import sys
-sys.path.insert(0, os.path.abspath('..'))
+sys.path.insert(0, os.path.abspath("./_ext"))
+
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
@@ -15,68 +16,61 @@ copyright = '2023, Gradience Team'
 author = 'Gradience Team'
 release = '0.4.0'
 
+
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
-sys.path.append(os.path.abspath("./_ext"))
+
+# Add any Sphinx extension module names here, as strings. They can be
+# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
+# ones.
 extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx_tabs.tabs',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.napoleon',
-    "sphinxext.opengraph",
+    "sphinx_tabs.tabs",
     "sphinx_copybutton",
-    "myst_parser",
-    'gobject_docs'
+    "sphinxext.opengraph"
 ]
 
-templates_path = ['_templates']
-exclude_patterns = []
-intersphinx_mapping = {'python': ('https://docs.python.org/3', None)}
+source_suffix = {
+    '.rst': 'restructuredtext'
+}
 
+# Add any paths that contain templates here, relative to this directory.
+templates_path = ['_templates']
+
+# List of patterns, relative to source directory, that match files and
+# directories to ignore when looking for source files.
+# This pattern also affects html_static_path and html_extra_path.
+exclude_patterns = ["_build", "README.md"]
+
+
+# -- Options for Gettext translation -----------------------------------------
+locale_dirs = ['locale/']   # path is example but recommended.
+gettext_compact = False     # optional.
 
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-gobject_docs_base_url = {
-    "glib": "https://docs.gtk.org/glib/",
-    "gobject": "https://docs.gtk.org/gobject/",
-    "gio": "https://docs.gtk.org/gio/",
-    "pango": "https://docs.gtk.org/Pango/",
-    "pixbuff": "https://docs.gtk.org/gdk-pixbuf/",
-    # GTK
-    "gtk3": "https://docs.gtk.org/gtk3/",
-    "gtk4": "https://docs.gtk.org/gtk4/",
-    # GSK
-    "gsk4": "https://docs.gtk.org/gsk4/",
-    # GDK
-    "gdk3": "https://docs.gtk.org/gdk3/",
-    "gdk3-x11": "https://docs.gtk.org/gdk3-x11/",
-    "gdk4": "https://docs.gtk.org/gdk4/",
-    "gdk4-wayland": "https://docs.gtk.org/gdk4-wayland/",
-    "gdk4-x11": "https://docs.gtk.org/gdk4-x11/",
-    # libadwaita
-    "adw": "https://gnome.pages.gitlab.gnome.org/libadwaita/doc/main/"
-}
-
-
 # See https://pradyunsg.me/furo/ for the theme's documentation
 html_theme = 'furo'
+
+# Add any paths that contain custom static files (such as style sheets) here,
+# relative to this directory. They are copied after the builtin static files,
+# so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
 html_css_files = ['css/style.css']
+
 html_logo = 'https://github.com/GradienceTeam/Design/raw/main/Pixels/Gradience Mini 4x (No Shadow).gif'
-html_show_sphinx = 0
 
-html_additional_pages = {
+html_additional_pages = {}
 
-}
 html_title = "Gradience"
 
 html_theme_options = {
     #"announcement": "This documentation is currently work in progress. Send your feedback or contribute!",
-    "source_repository": "https://github.com/GradienceTeam/Gradience",
+    "source_repository": "https://github.com/GradienceTeam/docs",
     "source_branch": "main",
-    "source_directory": "docs/",
+    "source_directory": "",
     "light_css_variables": {
         "font-stack": "Cantarell var, sans-serif",
         "color-brand-primary": "#4a86cf",
@@ -119,7 +113,7 @@ html_theme_options = {
         },
         {
             "name": "Discord",
-            "url": "#",
+            "url": "https://discord.com/invite/4njFDtfGEZ",
             "html": """
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"></path></svg>
             """,
@@ -127,16 +121,14 @@ html_theme_options = {
         },
         {
             "name": "Matrix",
-            "url": "#",
+            "url": "https://matrix.to/#/#Gradience:matrix.org",
             "html": """
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><title></title><path d="M.632.55v22.9H2.28V24H0V0h2.28v.55zm7.043 7.26v1.157h.033c.309-.443.683-.784 1.117-1.024.433-.245.936-.365 1.5-.365.54 0 1.033.107 1.481.314.448.208.785.582 1.02 1.108.254-.374.6-.706 1.034-.992.434-.287.95-.43 1.546-.43.453 0 .872.056 1.26.167.388.11.716.286.993.53.276.245.489.559.646.951.152.392.23.863.23 1.417v5.728h-2.349V11.52c0-.286-.01-.559-.032-.812a1.755 1.755 0 0 0-.18-.66 1.106 1.106 0 0 0-.438-.448c-.194-.11-.457-.166-.785-.166-.332 0-.6.064-.803.189a1.38 1.38 0 0 0-.48.499 1.946 1.946 0 0 0-.231.696 5.56 5.56 0 0 0-.06.785v4.768h-2.35v-4.8c0-.254-.004-.503-.018-.752a2.074 2.074 0 0 0-.143-.688 1.052 1.052 0 0 0-.415-.503c-.194-.125-.476-.19-.854-.19-.111 0-.259.024-.439.074-.18.051-.36.143-.53.282-.171.138-.319.337-.439.595-.12.259-.18.6-.18 1.02v4.966H5.46V7.81zm15.693 15.64V.55H21.72V0H24v24h-2.28v-.55z"></path></svg>
             """,
             "class": "",
         },
-    ],
+    ]
 }
 
-# See https://github.com/wpilibsuite/sphinxext-opengraph for opengraph config
-
-locale_dirs = ['locale/']   # path is example but recommended.
-gettext_compact = False     # optional.
+# Footer
+html_show_sphinx = 0

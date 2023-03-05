@@ -5,7 +5,7 @@
 ========
 
 .. image:: https://github.com/GradienceTeam/Design/raw/main/Screenshots/welcome.png
-    :alt: Welcome to gradience !
+    :alt: Welcome to Gradience!
 
 Gradience is splitted in 3 tabs plus some top level windows.
 
@@ -13,7 +13,7 @@ Colors
 ------
 
 .. image:: https://github.com/GradienceTeam/Design/raw/main/Screenshots/colors.png
-    :alt: Image of the colors tab
+    :alt: Image of the Colors tab
 
 
 The first tab is the one you see first when you open Gradience and called "Colors" is used for
@@ -40,7 +40,7 @@ Monet
 -----
 
 .. image:: https://github.com/GradienceTeam/Design/raw/main/Screenshots/monet.png
-    :alt: Image of the monet tab
+    :alt: Image of the Monet tab
 
 Monet is an engine made by Google for creating a color theme from your wallpaper.
 In Gradience, you can either choose to use your wallpaper or to use a custom picture
@@ -65,7 +65,7 @@ Finally, the last tab which is especially designed for an advanced usage. From t
 you can use a custom CSS
 
 .. image:: https://github.com/GradienceTeam/Design/raw/main/Screenshots/custom_css.png
-    :alt: Custom css
+    :alt: Custom CSS
 
 Or you can use plugins! Plugins are developed by the community for customizing more apps
 like Firefox. They usually require a special setup. You can enable or disable each plugin

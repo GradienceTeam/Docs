@@ -63,7 +63,7 @@ You can either clone the public repository:
 
     $ git clone git://github.com/GradienceTeam/Gradience
 
-Or download the `tarball`_:
+or download the `tarball`_:
 
 .. code-block:: console
 

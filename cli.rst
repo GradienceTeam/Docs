@@ -24,7 +24,7 @@ If using Gradience as a Flatpak package, launch CLI with:
 Alternative approach:
 ---------------------
 
-Launch CLI with a dedicated command: `gradience-cli`
+Launch CLI with a dedicated command: ``gradience-cli``
 
 CLI global help:
 ----------------
@@ -177,9 +177,9 @@ Flatpak-overrides
 Raw JSON output
 ---------------
 
-Some commands contain local parameter `--json` to help developers in implementing interactions with Gradience. Currently it can only be used with a handful of available arguments, but there are plans to extend this feature to all arguments. This parameter when used with supported argument, will output argument result in JSON format.
+Some commands contain local parameter ``--json`` to help developers in implementing interactions with Gradience. Currently it can only be used with a handful of available arguments, but there are plans to extend this feature to all arguments. This parameter when used with supported argument, will output argument result in JSON format.
 
-Example with `favorites` command:
+Example with ``favorites`` command:
 
 .. code-block:: console
 
