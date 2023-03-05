@@ -6,19 +6,15 @@
 Welcome to Gradience's documentation!
 =====================================
 
-.. automodule:: gradience
-   :members:
-
-
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+    :maxdepth: 2
+    :caption: Contents:
 
-   installation
-   setup
-   usage
-   troubleshooting
-   cli
+    installation
+    setup
+    usage
+    troubleshooting
+    cli
 
 
 Indices and tables
