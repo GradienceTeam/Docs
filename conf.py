@@ -68,7 +68,7 @@ html_title = "Gradience"
 
 html_theme_options = {
     #"announcement": "This documentation is currently work in progress. Send your feedback or contribute!",
-    "source_repository": "https://github.com/GradienceTeam/docs",
+    "source_repository": "https://github.com/GradienceTeam/Docs",
     "source_branch": "main",
     "source_directory": "",
     "light_css_variables": {
