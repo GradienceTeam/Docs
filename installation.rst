@@ -15,7 +15,7 @@ To install Gradience, run this command in your terminal:
 
 This is the preferred method to install Gradience, as it will always install the most recent stable release in a portable way whatever the distribution you use.
 
-If you don't have `flatpak`_ installed, this `Flatpak installation guide`_ can guide
+If you don't have `Flatpak`_ installed, this `Flatpak installation guide`_ can guide
 you through the process.
 
 .. _flatpak: https://flatpak.org
