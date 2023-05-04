@@ -19,19 +19,30 @@ There are number of reasons for this, they include the following:
 To get more info on why this happens launch Gradience from terminal:
 
 
-* For Flatpak: `flatpak run com.github.GradienceTeam.Gradience`
-* For System package: `GTK_DEBUG=all gradience`
+For Flatpak:
+
+.. code-block:: console
+
+    $ flatpak run com.github.GradienceTeam.Gradience
+
+For System package:
+
+.. code-block:: console
+
+    $ GTK_DEBUG=all gradience
 
 If there are no logs, try updating Gradience or reinstalling it, if you are using system package try using Flatpak version instead
 
-If the logs mention `gtk.css`\ , you can try removing both `~/.config/gtk-3.0/gtk.css` and `~/.config/gtk-4.0/gtk.css` using this command:
+If the logs mention `gtk.css`, you can try removing both `~/.config/gtk-3.0/gtk.css` and `~/.config/gtk-4.0/gtk.css` using this command:
 
-`rm -rf .config/gtk-4.0 .config/gtk-3.0`
+.. code-block:: console
+
+    $ rm -rf .config/gtk-4.0 .config/gtk-3.0
 
 Theme are reset after reboot or on next login
 ---------------------------------------------
 
-This issue is very common, it is caused either by **\ *Custom Accent Colors*\ ** or **\ *Material You Color Theming*\ ** extensions, this happens because they override the `gtk.css` theming file with their own, to solve that simply disable those extensions and re-apply the preset
+This issue is very common, it is caused either by `Custom Accent Colors` or `Material You Color Theming` extensions, this happens because they override the `gtk.css` theming file with their own, to solve that simply disable those extensions and re-apply the preset
 
 Gradience looks broken
 ----------------------
@@ -45,24 +56,39 @@ This can be caused by a lot of factors, some of them include:
 
 To fix it try the following:
 
-Set system theme to default **\ *Adwaita*\ ** using:
+Set system theme to default `Adwaita` using:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 * GNOME Tweaks
-* This command: `gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'`
+
+* This command:
+
+.. code-block:: console
+
+    $ gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'
 
 Check the `settings.ini` files and remove lines that contain `gtk-theme`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`cat ~/.config/gtk-3.0/settings.ini`
-`cat ~/.config/gtk-4.0/settings.ini`
+.. code-block:: console
+
+    $ cat ~/.config/gtk-3.0/settings.ini
+
+.. code-block:: console
+
+    $ cat ~/.config/gtk-4.0/settings.ini
 
 Check if there are theme override in environment:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`cat ~/.bash_profile`
-`cat ~/.bashrc`
+.. code-block:: console
+
+    $ cat ~/.bash_profile
+
+.. code-block:: console
+
+    $ cat ~/.bashrc
 
 Remove `GTK_THEME=<THEME_NAME>` if present
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -70,8 +96,17 @@ Remove `GTK_THEME=<THEME_NAME>` if present
 Check if there are theme overrides for Flatpak:
 
 
-* User: `cat ~/.local/share/flatpak/overrides/global`
-* System: `cat /var/lib/flatpak/overrides/global`
+User:
+
+.. code-block:: console
+
+    $ cat ~/.local/share/flatpak/overrides/global
+
+System:
+
+.. code-block:: console
+
+    $ cat /var/lib/flatpak/overrides/global
 
 If the file are something like this:
 

@@ -18,8 +18,8 @@ No additional setup is required for native Libadwaita applications.
 
 For Flatpak Libadwaita applications, you need to override their permissions:
 
-+ Run `sudo flatpak override --filesystem=xdg-config/gtk-4.0` or
-+ Use `Flatseal`_ and adding `xdg-config/gtk-4.0` to **Other files** in the **Filesystem** section of **All Applications**
+* Run `sudo flatpak override --filesystem=xdg-config/gtk-4.0` or
+* Use `Flatseal`_ and adding `xdg-config/gtk-4.0` to **Other files** in the **Filesystem** section of **All Applications**
 
 Vanilla GTK 4 applications
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -29,11 +29,11 @@ Use `this guide`_ to theme vanilla GTK 4 applications.
 GTK 3 applications
 ~~~~~~~~~~~~~~~~~~~~~~
 
-- Install and apply the `adw-gtk3`_ theme (don't forget to install the Flatpak package!)
-- For Flatpak applications, you need to override their permissions:
+* Install and apply the `adw-gtk3`_ theme (don't forget to install the Flatpak package!)
+* For Flatpak applications, you need to override their permissions:
 
-  - Run `sudo flatpak override --filesystem=xdg-config/gtk-3.0` or
-  - Use `Flatseal`_ and adding `xdg-config/gtk-3.0` to **Other files** in the **Filesystem** section of **All Applications**
+  * Run `sudo flatpak override --filesystem=xdg-config/gtk-3.0` or
+  * Use `Flatseal`_ and adding `xdg-config/gtk-3.0` to **Other files** in the **Filesystem** section of **All Applications**
 
 .. _Flatseal: https://github.com/tchx84/Flatseal
 .. _adw-gtk3: https://github.com/lassekongo83/adw-gtk3#readme
