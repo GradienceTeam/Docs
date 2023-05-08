@@ -66,9 +66,6 @@ html_additional_pages = {}
 
 html_title = "Gradience"
 
-html_js_files = [
-    ('https://analytics.projectsegfau.lt/js/script.js', {"data-domain": "gradience.readthedocs.io", "defer": "defer", "data-api": 'https://analytics.projectsegfau.lt/api/event'}),
-]
 
 html_theme_options = {
     #"announcement": "This documentation is currently work in progress. Send your feedback or contribute!",
